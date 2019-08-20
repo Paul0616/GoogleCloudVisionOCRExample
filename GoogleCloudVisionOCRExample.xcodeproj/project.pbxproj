@@ -12,9 +12,14 @@
 		40F0120E230BFCDD009B2527 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40F0120C230BFCDD009B2527 /* Main.storyboard */; };
 		40F01210230BFCDD009B2527 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40F0120F230BFCDD009B2527 /* Assets.xcassets */; };
 		40F01213230BFCDD009B2527 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40F01211230BFCDD009B2527 /* LaunchScreen.storyboard */; };
+		40F0121B230C00C9009B2527 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F0121A230C00C9009B2527 /* ImageViewController.swift */; };
+		40F0121D230C040E009B2527 /* GoogleCloudOCR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F0121C230C040D009B2527 /* GoogleCloudOCR.swift */; };
+		40F0121F230C0B8E009B2527 /* GoogleCloudOCRModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F0121E230C0B8E009B2527 /* GoogleCloudOCRModel.swift */; };
+		CF61F603A42ECE2E3C2FF7CD /* Pods_GoogleCloudVisionOCRExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 774A07155F4DF3F2575289B5 /* Pods_GoogleCloudVisionOCRExample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0640CFC7CA1A751A4DBD0E7A /* Pods-GoogleCloudVisionOCRExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleCloudVisionOCRExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleCloudVisionOCRExample/Pods-GoogleCloudVisionOCRExample.release.xcconfig"; sourceTree = "<group>"; };
 		40F01205230BFCDD009B2527 /* GoogleCloudVisionOCRExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleCloudVisionOCRExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40F01208230BFCDD009B2527 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40F0120A230BFCDD009B2527 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,11 @@
 		40F0120F230BFCDD009B2527 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40F01212230BFCDD009B2527 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		40F01214230BFCDD009B2527 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40F0121A230C00C9009B2527 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		40F0121C230C040D009B2527 /* GoogleCloudOCR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleCloudOCR.swift; sourceTree = "<group>"; };
+		40F0121E230C0B8E009B2527 /* GoogleCloudOCRModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleCloudOCRModel.swift; sourceTree = "<group>"; };
+		774A07155F4DF3F2575289B5 /* Pods_GoogleCloudVisionOCRExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoogleCloudVisionOCRExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F48EFE71BA28C521169C4981 /* Pods-GoogleCloudVisionOCRExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleCloudVisionOCRExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoogleCloudVisionOCRExample/Pods-GoogleCloudVisionOCRExample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF61F603A42ECE2E3C2FF7CD /* Pods_GoogleCloudVisionOCRExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A856FD34DAB3EB1013D7C3A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				774A07155F4DF3F2575289B5 /* Pods_GoogleCloudVisionOCRExample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3B8C7B0C56F601942AC1FDDC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F48EFE71BA28C521169C4981 /* Pods-GoogleCloudVisionOCRExample.debug.xcconfig */,
+				0640CFC7CA1A751A4DBD0E7A /* Pods-GoogleCloudVisionOCRExample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		40F011FC230BFCDD009B2527 = {
 			isa = PBXGroup;
 			children = (
 				40F01207230BFCDD009B2527 /* GoogleCloudVisionOCRExample */,
 				40F01206230BFCDD009B2527 /* Products */,
+				3B8C7B0C56F601942AC1FDDC /* Pods */,
+				1A856FD34DAB3EB1013D7C3A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,11 +85,14 @@
 			isa = PBXGroup;
 			children = (
 				40F01208230BFCDD009B2527 /* AppDelegate.swift */,
+				40F0121A230C00C9009B2527 /* ImageViewController.swift */,
 				40F0120A230BFCDD009B2527 /* ViewController.swift */,
 				40F0120C230BFCDD009B2527 /* Main.storyboard */,
 				40F0120F230BFCDD009B2527 /* Assets.xcassets */,
 				40F01211230BFCDD009B2527 /* LaunchScreen.storyboard */,
 				40F01214230BFCDD009B2527 /* Info.plist */,
+				40F0121C230C040D009B2527 /* GoogleCloudOCR.swift */,
+				40F0121E230C0B8E009B2527 /* GoogleCloudOCRModel.swift */,
 			);
 			path = GoogleCloudVisionOCRExample;
 			sourceTree = "<group>";
@@ -71,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 40F01217230BFCDD009B2527 /* Build configuration list for PBXNativeTarget "GoogleCloudVisionOCRExample" */;
 			buildPhases = (
+				7A7A1813FC96204B75723511 /* [CP] Check Pods Manifest.lock */,
 				40F01201230BFCDD009B2527 /* Sources */,
 				40F01202230BFCDD009B2527 /* Frameworks */,
 				40F01203230BFCDD009B2527 /* Resources */,
+				12A19F80582FAFD2CE674832 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,13 +165,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		12A19F80582FAFD2CE674832 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GoogleCloudVisionOCRExample/Pods-GoogleCloudVisionOCRExample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoogleCloudVisionOCRExample/Pods-GoogleCloudVisionOCRExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A7A1813FC96204B75723511 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GoogleCloudVisionOCRExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		40F01201230BFCDD009B2527 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				40F0120B230BFCDD009B2527 /* ViewController.swift in Sources */,
+				40F0121B230C00C9009B2527 /* ImageViewController.swift in Sources */,
 				40F01209230BFCDD009B2527 /* AppDelegate.swift in Sources */,
+				40F0121D230C040E009B2527 /* GoogleCloudOCR.swift in Sources */,
+				40F0121F230C0B8E009B2527 /* GoogleCloudOCRModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +365,7 @@
 		};
 		40F01218230BFCDD009B2527 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F48EFE71BA28C521169C4981 /* Pods-GoogleCloudVisionOCRExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +384,7 @@
 		};
 		40F01219230BFCDD009B2527 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0640CFC7CA1A751A4DBD0E7A /* Pods-GoogleCloudVisionOCRExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
