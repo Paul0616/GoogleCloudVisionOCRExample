@@ -106,12 +106,12 @@ class ViewController: UIViewController {
         view.layer.addSublayer(videoPreviewLayer)
         
         
-        let cropPath = CGPath(rect: CGRect(x: view.bounds.width/4, y: view.bounds.height/2-view.bounds.width/4, width: view.bounds.width/2, height: view.bounds.width/2), transform: nil)
-        let maskLayer = CAShapeLayer()
-        maskLayer.frame = view.bounds
-        maskLayer.backgroundColor = UIColor(red: 0.3, green: 0.3, blue: 0.3, alpha: 0.5).cgColor
-        maskLayer.path = cropPath
-        videoPreviewLayer.mask = maskLayer
+//        let cropPath = CGPath(rect: CGRect(x: view.bounds.width/4, y: view.bounds.height/2-view.bounds.width/4, width: view.bounds.width/2, height: view.bounds.width/2), transform: nil)
+//        let maskLayer = CAShapeLayer()
+//        maskLayer.frame = view.bounds
+//        maskLayer.backgroundColor = UIColor(red: 0.3, green: 0.3, blue: 0.3, alpha: 0.5).cgColor
+//        maskLayer.path = cropPath
+//        videoPreviewLayer.mask = maskLayer
 
         
     }
