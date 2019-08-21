@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 class GoogleCloudOCR {
-    private let apiKey = ""
+    private let apiKey = "AIzaSyA137QmmGAd-Wi-hbt_SPIm4F1iPFNauGY"
     private var apiURL: URL {
         return URL(string: "https://vision.googleapis.com/v1/images:annotate?key=\(apiKey)")!
     }
