@@ -11,6 +11,7 @@ import AVFoundation
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var topLeftCircle: UIView!
     var captureSession: AVCaptureSession!
     var tapRecognizer: UITapGestureRecognizer! // NEW
     var capturePhotoOutput: AVCapturePhotoOutput!
@@ -48,6 +49,27 @@ class ViewController: UIViewController {
         videoPreviewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
         videoPreviewLayer.frame = view.layer.bounds
         view.layer.addSublayer(videoPreviewLayer)
+//        let backgroundLayer = CALayer()
+//        backgroundLayer.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height)
+//        backgroundLayer.backgroundColor = UIColor(red: 0.3, green: 0.3, blue: 0.3, alpha: 0.5).cgColor
+//        view.layer.addSublayer(backgroundLayer)
+        topLeftCircle.layer.cornerRadius = 5
+        view.bringSubviewToFront(topLeftCircle)
+        
+        let cropPath = CGPath(rect: CGRect(x: view.bounds.width/4, y: view.bounds.height/2-view.bounds.width/4, width: view.bounds.width/2, height: view.bounds.width/2), transform: nil)
+        let maskLayer = CAShapeLayer()
+        maskLayer.frame = view.bounds
+        maskLayer.backgroundColor = UIColor(red: 0.3, green: 0.3, blue: 0.3, alpha: 0.5).cgColor
+        maskLayer.path = cropPath
+        view.layer.mask = maskLayer
+//        let cropLayer = CALayer()
+//        cropLayer.frame = CGRect(x: view.bounds.width/4, y: view.bounds.height/2-view.bounds.width/4, width: view.bounds.width/2, height: view.bounds.width/2)
+//        cropLayer.backgroundColor = UIColor.clear.cgColor
+//        cropLayer.name = "crop"
+       // view.layer.mask = cropLayer
+        //view.bounds.height/2-view.bounds.width/2
+        //view.layer.addSublayer(cropLayer)
+        
     }
     
     private func setupTapRecognizer() {
@@ -58,9 +80,25 @@ class ViewController: UIViewController {
     }
     
     @objc func handleTap(sender: UITapGestureRecognizer) {
-        if sender.state == .ended {
-            capturePhoto()
-        }
+//        if sender.state == .ended {
+//            capturePhoto()
+//        }
+//        if let sublayers = view.layer.sublayers {
+//
+//            for layer in sublayers {
+//                if layer.name == "crop" {
+//                    let oldPosition = layer.position
+//                    layer.position = CGPoint(x: oldPosition.x+20, y: oldPosition.y-20)
+//                }
+//            }
+//        }
+        
+        let cropPath = CGPath(rect: CGRect(x: view.bounds.width/3, y: view.bounds.height/2-view.bounds.width/3, width: view.bounds.width/3, height: view.bounds.width/3), transform: nil)
+        let ma: CAShapeLayer = view.layer.mask as! CAShapeLayer
+        ma.path = cropPath
+        
+        //view.layer.mask?.position = CGPoint(x: oldPosition!.x+40, y: oldPosition!.y-40)
+        //view.layer.mask?.frame = view.bounds
     }
     
     private func setupPhotoOutput() {

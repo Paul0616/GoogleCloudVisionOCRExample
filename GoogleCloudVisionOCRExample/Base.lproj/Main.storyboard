@@ -17,15 +17,31 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PMP-z1-0nf">
+                                <rect key="frame" x="99" y="135" width="10" height="10"/>
+                                <color key="backgroundColor" red="0.97254901959999995" green="0.41960784309999999" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="Qdv-7k-67y"/>
+                                    <constraint firstAttribute="width" constant="10" id="UHW-dy-20p"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="PMP-z1-0nf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="91" id="McO-Nm-LtK"/>
+                            <constraint firstItem="PMP-z1-0nf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="99" id="an9-vM-ZZp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="topLeftCircle" destination="PMP-z1-0nf" id="d2G-3v-5wP"/>
                         <segue destination="OdY-1Z-Wvs" kind="presentation" identifier="ShowImageSegue" animates="NO" id="6Gy-K9-16A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="116" y="21"/>
         </scene>
         <!--Image View Controller-->
         <scene sceneID="gTZ-BB-fxK">

@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 class GoogleCloudOCR {
-    private let apiKey = ""
+    private let apiKey = "AIzaSyA137QmmGAd-Wi-hbt_SPIm4F1iPFNauGY"
     private var apiURL: URL {
         return URL(string: "https://vision.googleapis.com/v1/images:annotate?key=\(apiKey)")!
     }
@@ -55,14 +55,13 @@ class GoogleCloudOCR {
                     completion(nil)
                     return
                 }
-                print(response.result.debugDescription)
-                guard let data = response.result.value else {
+                //print(response.result.debugDescription)
+                guard let _ = response.result.value else {
                     completion(nil)
                     return
                 }
-                print(data)
                 // Decode the JSON data into a `GoogleCloudOCRResponse` object.
-                let ocrResponse = try? JSONDecoder().decode(GoogleCloudOCRResponse.self, from: data as! Data)
+                let ocrResponse = try? JSONDecoder().decode(GoogleCloudOCRResponse.self, from: response.data!)  //(GoogleCloudOCRResponse.self, from: data as! Data)
                 completion(ocrResponse?.responses[0])
         }
     }

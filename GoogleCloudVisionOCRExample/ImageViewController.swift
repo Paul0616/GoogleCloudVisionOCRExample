@@ -21,6 +21,8 @@ class ImageViewController: UIViewController {
         }
         let imageView = UIImageView(frame: view.frame)
         imageView.image = image
+//        let croppedCGImage = imageView.image?.cgImage?.cropping(to: croparea)
+//        let croppedImage = UIImage(cgImage: croppedCGImage!)
         view.addSubview(imageView)
         setupCloseButton()
         setupActivityIndicator()
@@ -60,11 +62,42 @@ class ImageViewController: UIViewController {
                 fatalError("Did not recognize any text in this image")
             }
             print("Found \(ocrResult.annotations.count) bounding box annotations in the image!")
+            self.displayBoundingBoxes(for: ocrResult)
         }
+    }
+    
+    private func displayBoundingBoxes(for ocrResult: OCRResult) {
+        for annotation in ocrResult.annotations[1...] {
+            print(annotation.text)
+            let path = createBoundingBoxPath(along: annotation.boundingBox.vertices)
+            let shape = shapeForBoundingBox(path: path)
+            
+            view.layer.addSublayer(shape)
+        }
+    }
+    
+    private func createBoundingBoxPath(along vertices: [Vertex]) -> UIBezierPath {
+        let path = UIBezierPath()
+        path.move(to: vertices[0].toCGPoint())
+        for vertex in vertices[1...] {
+            path.addLine(to: vertex.toCGPoint())
+        }
+        path.close()
+        return path
+    }
+    
+    private func shapeForBoundingBox(path: UIBezierPath) -> CAShapeLayer {
+        let shape = CAShapeLayer()
+        shape.lineWidth = 1.5
+        shape.strokeColor = UIColor.blue.cgColor
+        shape.fillColor = UIColor.blue.withAlphaComponent(0.1).cgColor
+        shape.path = path.cgPath
+        return shape
     }
     
     private func setupActivityIndicator() {
         activityIndicator = UIActivityIndicatorView(style: .whiteLarge)
+        activityIndicator.tintColor = UIColor.lightGray
         view.addSubview(activityIndicator)
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
         activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
