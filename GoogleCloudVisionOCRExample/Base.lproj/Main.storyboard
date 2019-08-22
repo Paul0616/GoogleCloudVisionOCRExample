@@ -17,9 +17,27 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <segue destination="OdY-1Z-Wvs" kind="presentation" identifier="ShowImageSegue" animates="NO" id="6Gy-K9-16A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="21"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="gTZ-BB-fxK">
+            <objects>
+                <viewController id="OdY-1Z-Wvs" customClass="ImageViewController" customModule="GoogleCloudVisionOCRExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EfD-AJ-GGE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PMP-z1-0nf">
-                                <rect key="frame" x="83.5" y="204" width="40" height="40"/>
+                                <rect key="frame" x="83.5" y="316" width="40" height="40"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tAl-Oo-7cO">
                                         <rect key="frame" x="15" y="15" width="10" height="10"/>
@@ -39,7 +57,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="abT-zo-hdY">
-                                <rect key="frame" x="290.5" y="204" width="40" height="40"/>
+                                <rect key="frame" x="290.5" y="316" width="40" height="40"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0uL-Ze-npV">
                                         <rect key="frame" x="15" y="15" width="10" height="10"/>
@@ -59,7 +77,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="03q-nA-5Qf">
-                                <rect key="frame" x="83.5" y="652" width="40" height="40"/>
+                                <rect key="frame" x="83.5" y="540" width="40" height="40"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xbb-PD-nWe">
                                         <rect key="frame" x="15" y="15" width="10" height="10"/>
@@ -79,7 +97,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PZe-Uz-tCQ">
-                                <rect key="frame" x="290.5" y="652" width="40" height="40"/>
+                                <rect key="frame" x="290.5" y="540" width="40" height="40"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v1i-fP-7ww">
                                         <rect key="frame" x="15" y="15" width="10" height="10"/>
@@ -98,40 +116,58 @@
                                     <constraint firstAttribute="height" constant="40" id="lzF-oX-Kjv"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="p9J-ro-FTq">
+                                <rect key="frame" x="120" y="744" width="174" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.83137254901960778" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="B1c-Jo-uJr"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="174" id="Dds-Qh-6NL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="DETECT text from parcel's label">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapDetectText:" destination="OdY-1Z-Wvs" eventType="touchUpInside" id="qVe-G6-0Kj"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="image cropping so that it takes over only the area of interest, ensures better text detection" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ny-6M-O2k">
+                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.39513591609999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="40K-8q-mxl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                    <connections>
-                        <outlet property="bottomLeftCircle" destination="03q-nA-5Qf" id="AbI-zh-avu"/>
-                        <outlet property="bottomLeftDot" destination="xbb-PD-nWe" id="Oah-xm-VXa"/>
-                        <outlet property="bottomRightCircle" destination="PZe-Uz-tCQ" id="zTX-ih-uQc"/>
-                        <outlet property="bottomRightDot" destination="v1i-fP-7ww" id="BDb-Oq-xY6"/>
-                        <outlet property="topLeftCircle" destination="PMP-z1-0nf" id="d2G-3v-5wP"/>
-                        <outlet property="topLeftDot" destination="tAl-Oo-7cO" id="GZU-Dh-m6P"/>
-                        <outlet property="topRightCircle" destination="abT-zo-hdY" id="mL6-iz-6jJ"/>
-                        <outlet property="topRightDot" destination="0uL-Ze-npV" id="v3t-Tb-fhC"/>
-                        <segue destination="OdY-1Z-Wvs" kind="presentation" identifier="ShowImageSegue" animates="NO" id="6Gy-K9-16A"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="116" y="21"/>
-        </scene>
-        <!--Image View Controller-->
-        <scene sceneID="gTZ-BB-fxK">
-            <objects>
-                <viewController id="OdY-1Z-Wvs" customClass="ImageViewController" customModule="GoogleCloudVisionOCRExample" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="EfD-AJ-GGE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bpq-Ge-mzy" firstAttribute="bottom" secondItem="6Ny-6M-O2k" secondAttribute="bottom" id="C8H-fI-nd9"/>
+                            <constraint firstItem="p9J-ro-FTq" firstAttribute="centerX" secondItem="EfD-AJ-GGE" secondAttribute="centerX" id="MPp-rB-t6r"/>
+                            <constraint firstItem="bpq-Ge-mzy" firstAttribute="trailing" secondItem="6Ny-6M-O2k" secondAttribute="trailing" id="Z34-Sn-YOB"/>
+                            <constraint firstItem="6Ny-6M-O2k" firstAttribute="top" secondItem="p9J-ro-FTq" secondAttribute="bottom" constant="8" id="oMO-I4-4km"/>
+                            <constraint firstItem="6Ny-6M-O2k" firstAttribute="leading" secondItem="bpq-Ge-mzy" secondAttribute="leading" id="sqg-4W-at3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="bpq-Ge-mzy"/>
                     </view>
+                    <connections>
+                        <outlet property="bottomLeftCircle" destination="03q-nA-5Qf" id="FKW-gU-45x"/>
+                        <outlet property="bottomLeftDot" destination="xbb-PD-nWe" id="aby-1u-L5m"/>
+                        <outlet property="bottomRightCircle" destination="PZe-Uz-tCQ" id="21F-Fu-1J1"/>
+                        <outlet property="bottomRightDot" destination="v1i-fP-7ww" id="ddc-CA-cdS"/>
+                        <outlet property="detectButton" destination="p9J-ro-FTq" id="sYk-Zf-WwD"/>
+                        <outlet property="instructionsLabel" destination="6Ny-6M-O2k" id="e1n-o8-kHF"/>
+                        <outlet property="topLeftCircle" destination="PMP-z1-0nf" id="k6V-B2-UVG"/>
+                        <outlet property="topLeftDot" destination="tAl-Oo-7cO" id="ide-09-rZO"/>
+                        <outlet property="topRightCircle" destination="abT-zo-hdY" id="Sft-Jp-gv9"/>
+                        <outlet property="topRightDot" destination="0uL-Ze-npV" id="QGg-15-2lQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XJQ-Xb-0hq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="870" y="21"/>
+            <point key="canvasLocation" x="869.56521739130437" y="20.758928571428569"/>
         </scene>
     </scenes>
 </document>
