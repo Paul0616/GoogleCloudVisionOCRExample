@@ -44,8 +44,6 @@ class ImageViewController: UIViewController {
         view.bringSubviewToFront(detectButton)
         detectButton.titleLabel?.textAlignment = .center
         
-        print(view.bounds.width)
-        print(view.bounds.height)
         croppingRect = CGRect(x: view.bounds.width/4, y: view.bounds.height/2-view.bounds.width/4, width: view.bounds.width/2, height: view.bounds.width/2)
         
         let cropPath = CGPath(rect: croppingRect, transform: nil)
@@ -59,6 +57,7 @@ class ImageViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+       
         topLeftDot.layer.cornerRadius = 5
         topLeftCircle.tag = 51
         topLeftCircle.translatesAutoresizingMaskIntoConstraints = false
@@ -66,6 +65,7 @@ class ImageViewController: UIViewController {
         topLeftCircle.topAnchor.constraint(equalTo: view.topAnchor, constant: croppingRect.minY-topLeftCircle.frame.height/2).isActive = true
         addPanGesture(view: topLeftCircle)
         view.bringSubviewToFront(topLeftCircle)
+        
         
         topRightDot.layer.cornerRadius = 5
         topRightCircle.tag = 52
