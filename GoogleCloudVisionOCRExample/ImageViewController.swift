@@ -21,8 +21,8 @@ class ImageViewController: UIViewController {
         }
         let imageView = UIImageView(frame: view.frame)
         imageView.image = image
-//        let croppedCGImage = imageView.image?.cgImage?.cropping(to: croparea)
-//        let croppedImage = UIImage(cgImage: croppedCGImage!)
+//  //      let croppedCGImage = imageView.image?.cgImage?.cropping(to: croparea)
+//    //    let croppedImage = UIImage(cgImage: croppedCGImage!)
         view.addSubview(imageView)
         setupCloseButton()
         setupActivityIndicator()

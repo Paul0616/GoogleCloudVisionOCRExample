@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GoogleCloudVisionOCRExample/GoogleCloudOCR.swift"
-            timestampString = "588083652.196568"
+            timestampString = "588084052.414539"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "65"
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GoogleCloudVisionOCRExample/ViewController.swift"
-            timestampString = "588083652.19662"
+            timestampString = "588084052.414591"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GoogleCloudVisionOCRExample/ViewController.swift"
-            timestampString = "588083652.196924"
+            timestampString = "588084052.4148999"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,13 +58,61 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GoogleCloudVisionOCRExample/ViewController.swift"
-            timestampString = "588083652.1971411"
+            timestampString = "588084052.4151191"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "184"
-            endingLineNumber = "184"
+            startingLineNumber = "166"
+            endingLineNumber = "166"
             landmarkName = "moveViewWithPan(view:sender:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GoogleCloudVisionOCRExample/ViewController.swift"
+            timestampString = "588084065.8106"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "setupCamera()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GoogleCloudVisionOCRExample.ViewController.(setupCamera in _3809E2EC6816BC499ED5A7A18131E09B)() -&gt; ()"
+                  moduleName = "GoogleCloudVisionOCRExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pauloprea/Documents/IOS_Projects/GoogleCloudVisionOCRExample/GoogleCloudVisionOCRExample/ViewController.swift"
+                  timestampString = "588084066.038272"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "96"
+                  endingLineNumber = "96"
+                  offsetFromSymbolStart = "392">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GoogleCloudVisionOCRExample.ViewController.(setupCamera in _3809E2EC6816BC499ED5A7A18131E09B)() -&gt; ()"
+                  moduleName = "GoogleCloudVisionOCRExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pauloprea/Documents/IOS_Projects/GoogleCloudVisionOCRExample/GoogleCloudVisionOCRExample/ViewController.swift"
+                  timestampString = "588084066.039323"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "96"
+                  endingLineNumber = "96"
+                  offsetFromSymbolStart = "416">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
